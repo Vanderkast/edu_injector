@@ -1,0 +1,28 @@
+plugins {
+    id 'java'
+    id 'idea'
+}
+
+group 'com.vanderkast.edu'
+version '1.0-SNAPSHOT'
+
+sourceSets {
+    example {
+        compileClasspath += main.output + test.output
+        runtimeClasspath += main.output + test.output
+        java.srcDir "/src/example/java"
+        resources.srcDir "/src/example/resources"
+    }
+}
+
+configurations {
+    exampleImplementation.extendsFrom implementation
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'junit:junit:4.12'
+}

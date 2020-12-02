@@ -11,7 +11,7 @@ public class Main {
     public static void main(String[] args) {
         var properties = new Properties();
 
-        try (var input = new FileInputStream(args[0])){
+        try (var input = new FileInputStream(args[0])) {
             properties.load(input);
         } catch (IOException e) {
             e.printStackTrace();

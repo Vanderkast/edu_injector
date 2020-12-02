@@ -7,7 +7,7 @@ import java.lang.annotation.Target;
 
 /**
  * An annotation that is used to tell <code>Injector</code> to
- *      load value for argument from properties.
+ * load value for argument from properties.
  */
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.PARAMETER)

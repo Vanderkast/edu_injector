@@ -42,19 +42,6 @@ public class PropertyBasedInjector_Dev_Test {
         }
     }
 
-    public static abstract class Abs {
-        Abs() {
-        }
-    }
-
-    public static class Empty implements Dumb {
-
-    }
-
-    public interface Dumb {
-
-    }
-
     @Test
     public void getValue() {
         var injector = construct();
@@ -79,5 +66,18 @@ public class PropertyBasedInjector_Dev_Test {
         var properties = (Properties) field.get(injector);
         assertEquals("a1", properties.get("a"));
         assertEquals("b1", properties.get("b"));
+    }
+
+    public interface Dumb {
+
+    }
+
+    public static abstract class Abs {
+        Abs() {
+        }
+    }
+
+    public static class Empty implements Dumb {
+
     }
 }
